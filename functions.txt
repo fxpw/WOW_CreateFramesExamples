@@ -1,0 +1,665 @@
+WoW UI Panel / Option Templates
+A gathering of all the ui panel / option / confg templates I could find.
+
+It helps when creating config elements.
+
+frame = CreateFrame("frameType" [, "name" [, parent [, "template"]]])
+
+UIPanelTemplates
+    
+    <Button name="UIPanelButtonTemplate" virtual="true">...</Button>
+    <Button name="UIMenuButtonStretchTemplate" virtual="true">...</Button>
+    <Button name="UIGoldBorderButtonTemplate" virtual="true">...</Button>
+    <Button name="UIPanelButtonGrayTemplate" virtual="true">...</Button>
+    <Button name="UIPanelCloseButton" virtual="true">...</Button>
+    <Button name="UIPanelScrollUpButtonTemplate" virtual="true">...</Button>
+    <Button name="UIPanelScrollDownButtonTemplate" virtual="true">...</Button>
+    <Button name="TabButtonTemplate" virtual="true">...</Button>
+    <Button name="GameMenuButtonTemplate" inherits="UIPanelButtonTemplate" virtual="true">...</Button>
+    <Button name="UIServiceButtonTemplate" virtual="true">...</Button>
+    <Button name="UIPanelInfoButton" virtual="true">...</Button>
+    <Button name="UIPanelSquareButton" virtual="true">...</Button>
+    <Button name="UIPanelLargeSilverButton" virtual="true">...</Button>
+    <Button name="TruncatedButtonTemplate" motionScriptsWhileDisabled="true" virtual="true">...</Button>
+    <Button name="MagicButtonTemplate" inherits="UIPanelButtonTemplate" virtual="true">...</Button>
+    <Button name="MainHelpPlateButton" virtual="true">...</Button>
+    <Button name="HelpPlate" parent="UIParent" hidden="true" toplevel="true" enableMouse="true" enableKeyboard="true" frameStrata="DIALOG">...</Button>
+    <Button name="HelpPlateButton" virtual="true" frameStrata="DIALOG" hidden="true">...</Button>
+    
+    <Slider name="UIPanelScrollBarTemplate" virtual="true">...</Slider>
+    <Slider name="UIPanelScrollBarTrimTemplate" virtual="true">...</Slider>
+    <Slider name="UIPanelScrollBarTemplateLightBorder" virtual="true">...</Slider>
+    <Slider name="MinimalScrollBarTemplate" virtual="true">...</Slider>
+    
+    <ScrollFrame name="UIPanelScrollFrameCodeTemplate" virtual="true">...</ScrollFrame>
+    <ScrollFrame name="UIPanelScrollFrameTemplate" virtual="true" inherits="UIPanelScrollFrameCodeTemplate">...</ScrollFrame>
+    <ScrollFrame name="UIPanelScrollFrameTemplate2" inherits="UIPanelScrollFrameTemplate" virtual="true">...</ScrollFrame>
+    <ScrollFrame name="MinimalScrollFrameTemplate" inherits="UIPanelScrollFrameCodeTemplate" virtual="true">...</ScrollFrame>
+    <ScrollFrame name="FauxScrollFrameTemplate" inherits="UIPanelScrollFrameTemplate" virtual="true">...</ScrollFrame>
+    <ScrollFrame name="FauxScrollFrameTemplateLight" virtual="true">...</ScrollFrame>
+    <ScrollFrame name="ListScrollFrameTemplate" inherits="FauxScrollFrameTemplate" virtual="true">...</ScrollFrame>
+    <ScrollFrame name="InputScrollFrameTemplate" inherits="UIPanelScrollFrameTemplate" virtual="true">...</ScrollFrame>
+    
+    <EditBox name="InputBoxTemplate" enableMouse="true" virtual="true">...</EditBox>
+    <EditBox name="SearchBoxTemplate" inherits="InputBoxTemplate" autoFocus="false" virtual="true">...</EditBox>
+    <EditBox name="BagSearchBoxTemplate" inherits="SearchBoxTemplate" autoFocus="false" virtual="true">...</EditBox>
+    
+    <CheckButton name="UICheckButtonTemplate" virtual="true">...</CheckButton>
+    <CheckButton name="UIRadioButtonTemplate" virtual="true">...</CheckButton>
+    
+    <Frame name="AnimatedShineTemplate" virtual="true">...</Frame>
+    <Frame name="AutoCastShineTemplate" virtual="true">...</Frame>
+    <Frame name="UIPanelDialogTemplate" virtual="true">...</Frame>
+    <Frame name="GlowBoxTemplate" virtual="true">...</Frame>
+    <Frame name="GlowBoxArrowTemplate" virtual="true">...</Frame>
+    <Frame name="ThinBorderTemplate" virtual="true">...</Frame>
+    <Frame name="GlowBorderTemplate" virtual="true">...</Frame>
+    <Frame name="BaseBasicFrameTemplate" virtual="true">...</Frame>
+    <Frame name="BasicFrameTemplate" inherits="BaseBasicFrameTemplate" virtual="true">...</Frame>
+    <Frame name="BasicFrameTemplateWithInset" inherits="BasicFrameTemplate" virtual="true">...</Frame>
+    <Frame name="PortraitFrameTemplate" virtual="true">...</Frame>
+    <Frame name="InsetFrameTemplate" virtual="true">...</Frame>
+    <Frame name="InsetFrameTemplate2" virtual="true">...</Frame>
+    <Frame name="InsetFrameTemplate3" virtual="true">...</Frame>
+    <Frame name="ButtonFrameTemplate" inherits="PortraitFrameTemplate" virtual="true">...</Frame>
+    <Frame name="EtherealFrameTemplate" inherits="PortraitFrameTemplate" virtual="true">...</Frame>
+    <Frame name="HorizontalBarTemplate" virtual="true">...</Frame>
+    <Frame name="TranslucentFrameTemplate" virtual="true">...</Frame>
+    <Frame name="ShadowOverlayTemplate" virtual="true">...</Frame>
+    <Frame name="CapProgressBarTemplate" virtual="true">...</Frame>
+    <Frame name="TooltipBorderedFrameTemplate" virtual="true">...</Frame>
+    <Frame name="ExampleButtonFrame" inherits="ButtonFrameTemplate" parent="UIParent" hidden="true">...</Frame>
+    <Frame name="ThinGoldEdgeTemplate" virtual="true">...</Frame>
+    <Frame name="HelpPlateTooltip" inherits="GlowBoxTemplate" parent="UIParent" hidden="true" frameStrata="FULLSCREEN_DIALOG" frameLevel="2">...</Frame>
+    <Frame name="HelpPlateBox" inherits="ThinBorderTemplate" virtual="true" hidden="true">...</Frame>
+    <Frame name="HelpPlateBoxHighlight" inherits="GlowBorderTemplate" virtual="true" hidden="true">...</Frame>
+ 
+OptionsPanelTemplates
+
+    BUTTON
+    <Button name="OptionsButtonTemplate" inherits="UIPanelButtonTemplate" virtual="true">
+
+    CHECKBUTTON
+    <CheckButton name="OptionsBaseCheckButtonTemplate" virtual="true">
+    <CheckButton name="OptionsCheckButtonTemplate" virtual="true" inherits="OptionsBaseCheckButtonTemplate">
+    <CheckButton name="OptionsSmallCheckButtonTemplate" virtual="true" inherits="OptionsBaseCheckButtonTemplate">
+
+    SLIDER
+    <Slider name="OptionsSliderTemplate" orientation="HORIZONTAL" virtual="true" enableMouse="true">
+
+    FRAME
+    <Frame name="OptionsBoxTemplate" virtual="true">
+
+    OptionsFrameTemplates
+
+UIDropDownMenuTemplates
+    BUTTON
+    <Button name="UIDropDownMenuButtonTemplate" virtual="true">
+    <Button name="UIDropDownListTemplate" hidden="true" frameStrata="DIALOG" enableMouse="true" virtual="true">
+
+    FRAME
+    <Frame name="UIDropDownMenuTemplate" virtual="true">
+
+EasyMenu
+    -- Simplified Menu Display System
+    --  This is a basic system for displaying a menu from a structure table.
+    --
+    --  See UIDropDownMenu.lua for the menuList details.
+    --
+    --  Args:
+    --      menuList - menu table
+    --      menuFrame - the UI frame to populate
+    --      anchor - where to anchor the frame (e.g. CURSOR)
+    --      x - x offset
+    --      y - y offset
+    --      displayMode - border type
+    --      autoHideDelay - how long until the menu disappears
+    --
+    --
+    function EasyMenu(menuList, menuFrame, anchor, x, y, displayMode, autoHideDelay )
+        if ( displayMode == "MENU" ) then
+            menuFrame.displayMode = displayMode;
+        end
+        UIDropDownMenu_Initialize(menuFrame, EasyMenu_Initialize, displayMode, nil, menuList);
+        ToggleDropDownMenu(1, nil, menuFrame, anchor, x, y, menuList);  
+    end
+    
+    function EasyMenu_Initialize( frame, level, menuList )
+        for index = 1, #menuList do
+            local value = menuList[index]
+            if (value.text) then
+                value.index = index;
+                UIDropDownMenu_AddButton( value, level );
+            end
+        end
+    end
+
+Font Styles
+    <Font name="GameFontNormal" inherits="SystemFont_Shadow_Med1" virtual="true">
+        <Color r="1.0" g="0.82" b="0"/>
+    </Font>
+    <Font name="GameFontNormalLeft" inherits="GameFontNormal" justifyH="LEFT" virtual="true"/>
+    <Font name="GameFontNormalLeftBottom" inherits="GameFontNormalLeft" justifyV="BOTTOM" virtual="true"/>
+    <Font name="GameFontHighlight" inherits="GameFontNormal" virtual="true">
+        <Color r="1.0" g="1.0" b="1.0"/>
+    </Font>
+    <Font name="GameFontNormalLeftGreen" inherits="GameFontNormalLeft" virtual="true">
+        <Color r="0.0" g="1.0" b="0.0"/>
+    </Font>
+    <Font name="GameFontNormalLeftYellow" inherits="GameFontNormalLeft" virtual="true">
+        <Color r="1.0" g="1.0" b="0.0"/>
+    </Font>
+    <Font name="GameFontNormalLeftOrange" inherits="GameFontNormalLeft" virtual="true">
+        <Color r="1.0" g="0.5" b="0.25"/>
+    </Font>
+    <Font name="GameFontNormalLeftLightGreen" inherits="GameFontNormalLeft" virtual="true">
+        <Color r="0.25" g=".75" b="0.25"/>
+    </Font>
+    <Font name="GameFontNormalLeftGrey" inherits="GameFontNormalLeft" virtual="true">
+        <Color r="0.5" g="0.5" b="0.5"/>
+    </Font>
+    <Font name="GameFontNormalLeftRed" inherits="GameFontNormalLeft" virtual="true">
+        <Color r="0.9" g="0.0" b="0.0"/>
+    </Font>
+    <Font name="GameFontNormalMed3" inherits="SystemFont_Shadow_Med3" virtual="true">
+        <Color r="1.0" g="0.82" b="0"/>
+    </Font>
+    <Font name="GameFontDisableMed3" inherits="SystemFont_Shadow_Med3" virtual="true">
+        <Color r="0.5" g="0.5" b="0.5"/>
+    </Font>
+    <Font name="GameFontNormalRight" inherits="GameFontNormal" justifyH="RIGHT" virtual="true"/>
+    <Font name="GameFontNormalCenter" inherits="GameFontNormal" justifyH="CENTER" virtual="true"/>
+    <Font name="GameFontHighlightLeft" inherits="GameFontHighlight" justifyH="LEFT" virtual="true"/>
+    <Font name="GameFontHighlightCenter" inherits="GameFontHighlight" justifyH="CENTER" virtual="true"/>
+    <Font name="GameFontHighlightRight" inherits="GameFontHighlight" justifyH="RIGHT" virtual="true"/>
+    <Font name="GameFontDisable" inherits="GameFontNormal" virtual="true">
+        <Color r="0.5" g="0.5" b="0.5"/>
+    </Font>
+    <Font name="GameFontDisableLeft" inherits="GameFontDisable" justifyH="LEFT" virtual="true"/>
+    <Font name="GameFontGreen" inherits="GameFontNormal" virtual="true">
+        <Color r="0.1" g="1.0" b="0.1"/>
+    </Font>
+    <Font name="GameFontRed" inherits="GameFontNormal" virtual="true">
+        <Color r="1.0" g="0.1" b="0.1"/>
+    </Font>
+    <Font name="GameFontBlackSmall" inherits="SystemFont_Small" virtual="true">
+        <Color r="0" g="0" b="0"/>
+    </Font>
+    <Font name="GameFontBlackTiny" inherits="SystemFont_Tiny" virtual="true">
+        <Color r="0" g="0" b="0"/>
+    </Font>
+    <Font name="GameFontBlack" inherits="SystemFont_Med1" virtual="true">
+        <Color r="0" g="0" b="0"/>
+    </Font>
+    <Font name="GameFontBlackMedium" inherits="SystemFont_Med3" virtual="true">
+        <Color r="0" g="0" b="0"/>
+    </Font>
+    <Font name="GameFontWhiteSmall" inherits="GameFontBlackSmall" virtual="true">
+        <Color r="1.0" g="1.0" b="1.0"/>
+    </Font>  
+    <Font name="GameFontWhiteTiny" inherits="SystemFont_Tiny" virtual="true">
+        <Color r="1.0" g="1.0" b="1.0"/>
+    </Font>
+    <Font name="GameFontWhite" inherits="GameFontBlack" virtual="true">
+        <Color r="1.0" g="1.0" b="1.0"/>
+    </Font>
+    <Font name="GameFontNormalSmall" inherits="SystemFont_Shadow_Small" virtual="true">
+        <Color r="1.0" g="0.82" b="0"/>
+    </Font>
+    <Font name="GameFontNormalSmallLeft" inherits="GameFontNormalSmall" justifyH="LEFT" virtual="true"/>
+    <Font name="GameFontHighlightSmall" inherits="GameFontNormalSmall" virtual="true">
+        <Color r="1.0" g="1.0" b="1.0"/>
+    </Font>
+    <Font name="GameFontHighlightSmallLeft" inherits="GameFontHighlightSmall" justifyH="LEFT" virtual="true"/>
+    <Font name="GameFontHighlightSmallLeftTop" inherits="GameFontHighlightSmallLeft" justifyV="TOP" virtual="true"/>
+    <Font name="GameFontHighlightSmallRight" inherits="GameFontHighlightSmall" justifyH="RIGHT" virtual="true"/>
+    <Font name="GameFontHighlightExtraSmall" inherits="GameFontHighlightSmall" virtual="true">
+        <Color r="1.0" g="1.0" b="1.0"/>
+    </Font>
+    <Font name="GameFontHighlightExtraSmallLeft" inherits="GameFontHighlightExtraSmall" justifyH="LEFT" virtual="true"/>
+    <Font name="GameFontHighlightExtraSmallLeftTop" inherits="GameFontHighlightExtraSmallLeft" justifyV="TOP" virtual="true"/>
+    <Font name="GameFontDisableSmall" inherits="GameFontNormalSmall" virtual="true">
+        <Color r="0.5" g="0.5" b="0.5"/>
+    </Font>
+    <Font name="GameFontDisableSmallLeft" inherits="GameFontDisableSmall" justifyH="LEFT" virtual="true"/>
+    <Font name="GameFontDarkGraySmall" inherits="GameFontNormalSmall" virtual="true">
+        <Color r="0.35" g="0.35" b="0.35"/>
+    </Font>
+    <Font name="GameFontGreenSmall" inherits="GameFontNormalSmall" virtual="true">
+        <Color r="0.1" g="1.0" b="0.1"/>
+    </Font>
+    <Font name="GameFontRedSmall" inherits="GameFontNormalSmall" virtual="true">
+        <Color r="1.0" g="0.1" b="0.1"/>
+    </Font>
+    <Font name="GameFontHighlightSmallOutline" inherits="GameFontHighlightSmall"  virtual="true"/>
+    <Font name="GameFontHighlightMedium" inherits="SystemFont_Shadow_Med3" virtual="true">
+        <Color r="1.0" g="1.0" b="1.0"/>
+    </Font>
+    <Font name="GameFontNormalLarge" inherits="SystemFont_Shadow_Large" virtual="true">
+        <Color r="1.0" g="0.82" b="0"/>
+    </Font>
+    <Font name="GameFontNormalLargeLeft" inherits="GameFontNormalLarge" justifyH="LEFT" virtual="true"/>
+    <Font name="GameFontNormalLargeLeftTop" inherits="GameFontNormalLargeLeft" justifyV="TOP" virtual="true"/>
+    <Font name="GameFontHighlightLarge" inherits="GameFontNormalLarge" virtual="true">
+        <Color r="1.0" g="1.0" b="1.0"/>
+    </Font>
+    <Font name="GameFontDisableLarge" inherits="GameFontNormalLarge" virtual="true">
+        <Color r="0.5" g="0.5" b="0.5"/>
+    </Font>
+    <Font name="GameFontGreenLarge" inherits="GameFontNormalLarge" virtual="true">
+        <Color r="0.1" g="1.0" b="0.1"/>
+    </Font>
+    <Font name="GameFontRedLarge" inherits="GameFontNormalLarge" virtual="true">
+        <Color r="1.0" g="0.1" b="0.1"/>
+    </Font>
+    <Font name="GameFontNormalHuge" inherits="SystemFont_Shadow_Huge1" virtual="true">
+        <Color r="1.0" g="0.82" b="0"/>
+    </Font>
+    <Font name="GameFontNormalHugeBlack" inherits="SystemFont_Huge1" virtual="true">
+        <Color r="0" g="0" b="0"/>
+    </Font>
+    <Font name="GameFontHighlightHuge" inherits="GameFontNormalHuge" virtual="true">
+        <Color r="1.0" g="1.0" b="1.0"/>
+    </Font>  
+    <Font name="BossEmoteNormalHuge" inherits="SystemFont_Shadow_Huge3" virtual="true">
+        <Color r="1.0" g="0.82" b="0"/>
+    </Font>
+ 
+    <Font name="NumberFontNormal" inherits="NumberFont_Outline_Med" virtual="true" >
+        <Color r="1.0" g="1.0" b="1.0"/>
+    </Font>
+    <Font name="NumberFontNormalRight" inherits="NumberFontNormal" justifyH="RIGHT" virtual="true"/>
+    <Font name="NumberFontNormalRightRed" inherits="NumberFontNormalRight" virtual="true" >
+        <Color r="1.0" g="0.1" b="0.1"/>
+    </Font>
+    <Font name="NumberFontNormalRightYellow" inherits="NumberFontNormalRight" virtual="true" >
+        <Color r="1.0" g="0.82" b="0"/>
+    </Font>
+    <Font name="NumberFontNormalYellow" inherits="NumberFontNormal" virtual="true" >
+        <Color r="1.0" g="0.82" b="0"/>
+    </Font>
+    <Font name="NumberFontNormalSmall" inherits="NumberFont_OutlineThick_Mono_Small" virtual="true">
+        <Color r="1.0" g="1.0" b="1.0"/>
+    </Font>
+    <Font name="NumberFontNormalSmallGray" inherits="NumberFontNormalSmall" virtual="true">
+        <Color r="0.6" g="0.6" b="0.6"/>
+    </Font>
+    <Font name="NumberFontNormalGray" inherits="NumberFont_Outline_Med" virtual="true" >
+        <Color r="0.6" g="0.6" b="0.6"/>
+    </Font>
+    <Font name="NumberFontNormalLarge" inherits="NumberFont_Outline_Large" virtual="true">
+        <Color r="1.0" g="1.0" b="1.0"/>
+    </Font>
+    <Font name="NumberFontNormalLargeRight" inherits="NumberFontNormalLarge" justifyH="RIGHT" virtual="true"/>
+    <Font name="NumberFontNormalLargeRightRed" inherits="NumberFontNormalLargeRight" virtual="true" >
+        <Color r="1.0" g="0.1" b="0.1"/>
+    </Font>
+    <Font name="NumberFontNormalLargeRightYellow" inherits="NumberFontNormalLargeRight" virtual="true" >
+        <Color r="1.0" g="0.82" b="0.0"/>
+    </Font>
+    <Font name="NumberFontNormalLargeYellow" inherits="NumberFontNormalLarge" virtual="true">
+        <Color r="1.0" g="0.82" b="0.0"/>
+    </Font>
+    <Font name="NumberFontNormalHuge" inherits="NumberFont_Outline_Huge" virtual="true">
+        <Color r="1.0" g="1.0" b="1.0"/>
+    </Font>
+     
+    <Font name="ChatFontNormal" inherits="NumberFont_Shadow_Med" virtual="true">
+        <Color r="1.0" g="1.0" b="1.0"/>
+    </Font>
+    <Font name="ChatFontSmall" inherits="NumberFont_Shadow_Small" virtual="true">
+        <Color r="1.0" g="1.0" b="1.0"/>
+    </Font>
+     
+    <Font name="QuestTitleFont" inherits="QuestFont_Shadow_Huge" virtual="true">
+        <Color r="0" g="0" b="0"/>
+    </Font>
+    <Font name="QuestTitleFontBlackShadow" inherits="QuestFont_Shadow_Huge" virtual="true">
+        <Shadow>
+            <Offset>
+                <AbsDimension x="1" y="-1"/>
+            </Offset>
+            <Color r="0" g="0" b="0"/>
+        </Shadow>
+        <Color r="1" g=".82" b="0"/>
+    </Font>
+    <Font name="QuestFont" inherits="SystemFont_Med2" virtual="true">
+        <Color r="0" g="0" b="0"/>
+    </Font>
+    <Font name="QuestFontLeft" inherits="QuestFont" justifyH="LEFT" virtual="true"/>
+    <Font name="QuestFontNormalSmall" inherits="GameFontBlack" virtual="true">
+        <Color r="0.30" g="0.18" b="0"/>
+    </Font>
+    <Font name="QuestFontHighlight" inherits="SystemFont_Med3" virtual="true">
+        <Color r="0" g="0" b="0"/>
+    </Font>
+     
+    <Font name="QuestDifficulty_Impossible" inherits="GameFontNormalLeft" virtual="true">
+        <Color r="1.0" g="0.1" b="0.1"/>
+    </Font>
+    <Font name="QuestDifficulty_VeryDifficult" inherits="GameFontNormalLeft" virtual="true">
+        <Color r="1.0" g="0.5" b="0.25"/>
+    </Font>
+    <Font name="QuestDifficulty_Difficult" inherits="GameFontNormalLeft" virtual="true">
+        <Color r="1.0" g="1.0" b="0.0"/>
+    </Font>
+    <Font name="QuestDifficulty_Standard" inherits="GameFontNormalLeft" virtual="true">
+        <Color r="0.25" g="0.75" b="0.25"/>
+    </Font>
+    <Font name="QuestDifficulty_Trivial" inherits="GameFontNormalLeft" virtual="true">
+        <Color r="0.5" g="0.5" b="0.5"/>
+    </Font>
+    <Font name="QuestDifficulty_Header" inherits="GameFontNormalLeft" virtual="true">
+        <Color r="0.7" g="0.7" b="0.7"/>
+    </Font>
+     
+    <Font name="ItemTextFontNormal" inherits="QuestFont_Large" justifyH="LEFT" virtual="true">
+        <Color r="0.18" g="0.12" b="0.06"/>
+    </Font>
+ 
+    <Font name="MailTextFontNormal" inherits="MailFont_Large" justifyH="LEFT" virtual="true">
+        <Color r="0.18" g="0.12" b="0.06"/>
+    </Font>
+     
+    <Font name="SubSpellFont" inherits="SpellFont_Small" virtual="true">
+        <Color r="0.35" g="0.2" b="0"/>
+    </Font>
+    <Font name="NewSubSpellFont" inherits="SubSpellFont" virtual="true">
+        <Shadow>
+            <Offset>
+                <AbsDimension x="1" y="-1"/>
+            </Offset>
+            <Color r="0" g="0" b="0"/>
+        </Shadow>
+        <Color r="0.82" g="0.7" b="0.54"/>
+    </Font>
+ 
+    <Font name="DialogButtonNormalText" inherits="SystemFont_Large" virtual="true">
+        <Color r="1.0" g="0.82" b="0.0"/>
+    </Font>
+    <Font name="DialogButtonHighlightText" inherits="DialogButtonNormalText" virtual="true">
+        <Color r="1.0" g="1.0" b="1.0"/>
+    </Font>
+ 
+    <Font name="ZoneTextFont" inherits="SystemFont_OutlineThick_WTF" virtual="true">
+        <Color r="1.0" g="0.9294" b="0.7607"/>
+    </Font>
+    <Font name="SubZoneTextFont" inherits="SystemFont_OutlineThick_Huge4" virtual="true"/>
+    <Font name="PVPInfoTextFont" inherits="SystemFont_OutlineThick_Huge2" virtual="true"/>
+    <Font name="ErrorFont" inherits="GameFontNormalLarge" virtual="true"/>
+    <Font name="TextStatusBarText" inherits="SystemFont_Outline_Small" virtual="true">
+        <Color r="1.0" g="1.0" b="1.0"/>
+    </Font>
+    <Font name="TextStatusBarTextLarge" inherits="SystemFont_Outline" virtual="true">
+        <Color r="1.0" g="1.0" b="1.0"/>
+    </Font>  
+    <Font name="CombatLogFont" inherits="GameFontHighlight" justifyH="LEFT" virtual="true"/>
+    <Font name="GameTooltipText" inherits="Tooltip_Med" justifyH="LEFT" virtual="true">
+        <Color r="1.0" g="1.0" b="1.0"/>
+    </Font>
+    <Font name="GameTooltipTextSmall" inherits="Tooltip_Small" justifyH="LEFT" virtual="true">
+        <Color r="1.0" g="1.0" b="1.0"/>
+    </Font>
+    <Font name="GameTooltipHeaderText" inherits="GameTooltipHeader" justifyH="LEFT" virtual="true">
+        <Color r="1.0" g="1.0" b="1.0"/>
+    </Font>
+    <Font name="WorldMapTextFont" inherits="SystemFont_OutlineThick_WTF" virtual="true">
+        <Color r="1.0" g="0.9294" b="0.7607"/>
+    </Font>
+    <Font name="InvoiceTextFontNormal" inherits="InvoiceFont_Med" justifyH="LEFT" virtual="true">
+        <Color r="0.18" g="0.12" b="0.06"/>
+    </Font>
+    <Font name="InvoiceTextFontSmall" inherits="InvoiceFont_Small" justifyH="LEFT" virtual="true">
+        <Color r="0.18" g="0.12" b="0.06"/>
+    </Font>
+    <Font name="CombatTextFont" inherits="SystemFont_Shadow_Huge3" virtual="true">
+        <Color r="1.0" g="0.82" b="0"/>
+    </Font>
+    <Font name="MovieSubtitleFont" inherits="SystemFont_Shadow_Outline_Huge2" virtual="true">
+        <Color r="1.0" g="0.78" b="0"/>
+    </Font>
+     
+    <Font name="AchievementPointsFont" inherits="SystemFont_Shadow_Large" justifyH="CENTER" virtual="true">
+        <Color r="1.0" g="0.82" b="0"/>
+    </Font>  
+    <Font name="AchievementPointsFontSmall" inherits="SystemFont_Shadow_Med1" justifyH="CENTER" virtual="true">
+        <Color r="1.0" g="0.82" b="0"/>
+    </Font>  
+    <Font name="AchievementDescriptionFont" inherits="SystemFont_Small" justifyH="CENTER" justifyV="TOP" virtual="true">
+        <!--     You might be wondering why AchievementDescriptionFont inherits from SystemFont_Small and has its own shadow, rather than inheriting from SystemFont_Shadow_Small.
+            Good question! SystemFont_Shadow_Small and SystemFont_Small are the same height in most languages, but in Chinese, they are different. SystemFont_Small is the smaller of the two, and what
+            we need to use for things to fit at all well. -->
+        <Shadow>
+            <Offset>
+                <AbsDimension x="1" y="-1"/>
+            </Offset>
+            <Color r="0" g="0" b="0"/>
+        </Shadow>
+        <Color r="1" g="1" b="1"/>
+    </Font>
+    <Font name="AchievementCriteriaFont" inherits="AchievementDescriptionFont" justifyH="LEFT" justifyV="MIDDLE" virtual="true"/>
+    <Font name="AchievementDateFont" inherits="AchievementFont_Small" justifyH="RIGHT" virtual="true">
+        <Color r="1.0" g="0.82" b="0"/>
+    </Font>  
+    <Font name="VehicleMenuBarStatusBarText" inherits="SystemFont_Shadow_Med1" virtual="true">
+        <Color r="1.0" g="1.0" b="1.0"/>
+    </Font>
+    <Font name="FocusFontSmall" inherits="SystemFont_Shadow_Med2" virtual="true">
+        <Color r="1.0" g="0.82" b="0"/>
+    </Font>
+
+
+examples
+    CheckButton / CheckBox
+        A checkbox like input element. Basically switch values between 0 and 1.
+        FrameType: CheckButton
+        Template: UICheckButtonTemplate
+        --Example:
+            local name = "MyExampleCheckButton"
+            local template = "UICheckButtonTemplate"
+            local checkButton = CreateFrame("Button",name,UIParent,template) --frameType, frameName, frameParent, frameTemplate    
+            checkButton:SetPoint("CENTER",0,0)
+            checkButton.text = _G[name.."Text"]
+            checkButton.text:SetText("Hello World")
+            checkButton:SetScript("OnClick", function(self,event,arg1) 
+            if self:GetChecked() then
+                print("Button is checked")
+            else
+                print("Button is unchecked")
+            end
+            end)
+        --Example2:
+            local name = "MyExampleCheckButton"
+            local template = "OptionsBaseCheckButtonTemplate"
+            local checkButton = CreateFrame("Button",name,UIParent,template) --frameType, frameName, frameParent, frameTemplate    
+            checkButton:SetPoint("CENTER",0,0)
+            checkButton.text = _G[name.."Text"]
+            checkButton.text:SetText("Hello World")
+            local callback = function(setting) print("callback") end
+            checkButton.setFunc = callback
+    Slider
+        Sliders are elements intended to allow the user to choose a value in a range.
+        FrameType: Slider
+        Template: UIPanelScrollBarTemplate
+        --Example:
+            local name = "MyExampleSlider"
+            local template = "OptionsSliderTemplate"
+            local slider = CreateFrame("Slider",name,UIParent,template) --frameType, frameName, frameParent, frameTemplate   
+            slider:SetPoint("CENTER",0,0)
+            slider.textLow = _G[name.."Low"]
+            slider.textHigh = _G[name.."High"]
+            slider.text = _G[name.."Text"]
+            slider:SetMinMaxValues(1, 100)
+            slider.minValue, slider.maxValue = slider:GetMinMaxValues() 
+            slider.textLow:SetText(slider.minValue)
+            slider.textHigh:SetText(slider.maxValue)
+            slider.text:SetText(name)
+            slider:SetValue(50)
+            slider:SetValueStep(1)
+            slider:SetScript("OnValueChanged", function(self,event,arg1) print(event) end)
+    Button
+        A clickable frame that calls an action OnClick. Blizzard provides tons of button templates.
+        FrameType: Button
+        Template: UIPanelButtonTemplate
+        --Example:
+            local name = "MyExampleButton"
+            local template = "UIPanelButtonTemplate"
+            local button = CreateFrame("Button",name,UIParent,template) --frameType, frameName, frameParent, frameTemplate    
+            button:SetSize(150,80)
+            button:SetPoint("CENTER",0,0)
+            button.text = _G[name.."Text"]
+            button.text:SetText("Hello World")
+
+    UIDropDownMenu
+        Depending on setup this can be both a selectbox or a context menu.
+        FrameType: Frame
+        Template: UIDropDownMenuTemplate
+        --EasyMenu Example:
+            local dropdown = CreateFrame("Frame", "MyMenuFrame", nil, "UIDropDownMenuTemplate")
+            local menuTable = {}
+            local line, data, submenu = nil, nil, nil
+            
+            local function createMenuLine(data)
+            local line = {}
+            if not data then return line end
+            line.text = data.text or nil
+            line.isTitle = data.isTitle or nil
+            line.notCheckable = data.notCheckable or nil
+            line.notClickable = data.notClickable or nil
+            line.keepShownOnClick = data.keepShownOnClick or nil
+            line.hasArrow = data.hasArrow or nil 
+            line.func = data.func or nil
+            line.menuList = data.menuList or nil
+            return line
+            end
+            
+            local function createDelimLine()
+            --split line
+            local delim = "~~~~~~~~~~~~~~~~~~~~~~~"
+            data = { text = delim, notCheckable = true, notClickable = true }
+            line = createMenuLine(data)
+            return line
+            end
+            
+            local function createMenu()
+            
+            --title
+            data = { text = "MyMenuTitle", isTitle = true, notCheckable = true, notClickable = true }
+            line = createMenuLine(data)
+            table.insert(menuTable,line)
+            
+            --add delimiter
+            line = createDelimLine()
+            table.insert(menuTable,line)
+            
+                --generate sub menu
+                submenu = {}      
+                data = { text = "General", isTitle = true, notCheckable = true, notClickable = true }
+                line = createMenuLine(data)
+                table.insert(submenu,line)
+                line = createDelimLine()
+                table.insert(submenu,line)
+                data = { text = "MyOption1", func = myGlobalFunction1, notCheckable = true, keepShownOnClick = true, }
+                line = createMenuLine(data)
+                table.insert(submenu,line)
+                data = { text = "MyOption2", func = myGlobalFunction2, notCheckable = true, keepShownOnClick = true, }
+                line = createMenuLine(data)
+                table.insert(submenu,line)
+                data = { text = "MyOption3", func = myGlobalFunction3, notCheckable = true, keepShownOnClick = true, }
+                line = createMenuLine(data)
+                table.insert(submenu,line)
+            
+            --add submenu to menuTable
+            data = { text = "General", notCheckable = true, hasArrow = true, menuList = submenu }
+            line = createMenuLine(data)
+            table.insert(menuTable,line)
+            
+            --add delimiter
+            line = createDelimLine()
+            table.insert(menuTable,line)
+            
+            --close menu
+            data = { text = "Close", func = function() CloseDropDownMenus() end, notCheckable = true }
+            line = createMenuLine(data)
+            table.insert(menuTable,line)
+            
+            end
+            
+            --INIT
+            createMenu()
+            
+            --CALL
+            local function SlashCmd(cmd)
+            EasyMenu(menuTable, dropdown, "cursor", 10 , -15, "MENU")
+            end
+            SlashCmdList["menu"] = SlashCmd
+            SLASH_menu1 = "/menu"
+
+    ColorSelect / ColorPicker
+        In many cases you want to recolor textures. All you have to do is to call the ColorPicker and apply a callback function that handles the colors returned by the ColorPicker. Normally you have a small frame with a texture and once you change the color in the ColorPicker the texture color updates via the callback function.
+        FrameType: Frame (with an applied texture)
+        --Example:
+            local function showColorPicker(r,g,b,a,callback)
+                ColorPickerFrame:SetColorRGB(r,g,b)
+                ColorPickerFrame.hasOpacity, ColorPickerFrame.opacity = (a ~= nil), a
+                ColorPickerFrame.previousValues = {r,g,b,a}
+                ColorPickerFrame.func, ColorPickerFrame.opacityFunc, ColorPickerFrame.cancelFunc = callback, callback, callback
+                ColorPickerFrame:Hide() -- Need to run the OnShow handler.
+                ColorPickerFrame:Show()
+                end
+                
+                local function createMyFrame()
+                --frame
+                local f = CreateFrame("FRAME",nil,UIParent)
+                f:SetSize(150,150)
+                f:SetPoint("CENTER",0,0)
+                --texture
+                f.tex = f:CreateTexture(nil,"BACKGROUND",nil,-7)
+                f.tex:SetAllPoints(f)
+                f.tex:SetTexture(1,0,0,1)
+                --recolor callback function
+                f.recolorTexture = function(color)
+                    local r,g,b,a
+                    if color then
+                    r,g,b,a = unpack(color)
+                    else
+                    r,g,b = ColorPickerFrame:GetColorRGB()
+                    a = OpacitySliderFrame:GetValue()
+                    end
+                    f.tex:SetVertexColor(r,g,b,a)
+                end
+                f:EnableMouse(true)
+                f:SetScript("OnMouseDown", function(self,button,...)
+                    if button == "LeftButton" then
+                    local r,g,b,a = self.tex:GetVertexColor()
+                    showColorPicker(r,g,b,a,self.recolorTexture)
+                    end
+                end)
+                end
+                
+                --init
+                createMyFrame()
+        StatusBar
+            Sometimes it can be helpful to display data in a statusbar. They are similar to sliders, just without the option to edit. Like a progressbar or healthbar.
+            FrameType: StatusBar
+            Template: ???
+
+            --Example:
+                local color = {0,1,0}
+                local statusbar = CreateFrame("StatusBar",nil,UIParent) --frameType, frameName, frameParent  
+                statusbar:SetPoint("CENTER",0,0)
+                statusbar:SetSize(200,20)
+                --statusbar background
+                statusbar.bg = statusbar:CreateTexture(nil,"BACKGROUND",nil,-8)
+                statusbar.bg:SetAllPoints(statusbar)
+                statusbar.bg:SetTexture(unpack(color))
+                statusbar.bg:SetAlpha(0.2)
+                --statusbar texture
+                local tex = statusbar:CreateTexture(nil,"BACKGROUND",nil,-6)
+                tex:SetTexture(unpack(color))
+                statusbar:SetStatusBarTexture(tex)
+                statusbar:SetStatusBarColor(unpack(color))
+                --values
+                statusbar:SetMinMaxValues(1, 100)
+                statusbar.minValue, statusbar.maxValue = statusbar:GetMinMaxValues()
+                statusbar:SetValue(50)
